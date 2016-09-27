@@ -10,9 +10,9 @@ Namespace Controllers
     Public Class UserController
         Inherits BaseApiController
 
-        'GET v1/user/{userid}/{email} 
+        'GET v1/users/{userid}/{email}/detail
         <HttpGet>
-        <ActionName("json")>
+        <ActionName("detail")>
         Public Function GetUserDetail(id As Integer, emailadddress As String) As HttpResponseMessage
 
             Dim detail = New UserManager(Configs.ConnectionString).GetUserDetail(id, emailadddress)
